@@ -34,8 +34,7 @@
     "*.{js,jsx,ts,tsx}": [
       "eslint",
       "prettier"
-    ],
-    "package.json": "npx @guidesmiths/license-checker --failOn=AGPL,GPL --disableReport"
+    ]
   },
   "eslintConfig": {
     "extends": [
