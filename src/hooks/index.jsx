@@ -1,0 +1,1 @@
+export { useTips } from './useTips';

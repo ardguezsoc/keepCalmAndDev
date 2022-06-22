@@ -1,0 +1,1 @@
+export { createTipRepository } from './tips';
