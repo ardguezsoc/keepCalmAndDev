@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledResultCard = styled.div`
-  border: 1px solid ${({ theme }) => theme.palette.common.green};
+  border: 1px solid ${({ theme }) => theme.palette.primary.main};
   background-color: ${({ theme }) => theme.palette.common.white};
   width: 225px;
   height: 300px;
@@ -45,7 +45,7 @@ export const StyledResultCard = styled.div`
   .author {
     font-weight: 500;
     font-size: ${({ theme }) => theme.font.size.extraTiny};
-    color: ${({ theme }) => theme.palette.common.greenSuccess};
+    color: ${({ theme }) => theme.palette.primary.dark};
     word-break: break-word;
   }
 

@@ -9,7 +9,6 @@ export const HeaderContainer = styled.div`
   position: absolute;
   background-color: ${({ theme }) => theme.palette.common.transparent};
   color: ${({ theme }) => theme.palette.common.white};
-  border-bottom: 1px solid #00c294;
   box-sizing: border-box;
   display: flex;
   justify-content: center;

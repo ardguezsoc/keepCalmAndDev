@@ -1,22 +1,22 @@
 import backgroundVideo from 'assets/videos/blue-ocean.mp4';
 import { Button } from 'components/Button/Button';
-import { useTips } from 'hooks';
 import {
-  BackgroundVideo, MainButtonsContainer,
+  BackgroundVideo,
+  MainButtonsContainer,
   StyledHomePage
 } from 'pages/HomePage/HomePage.styled';
+import { MAIN_PAGES_ROUTES } from 'constants/routes'
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
-  const { getTipsPage } = useTips();
-  const data = getTipsPage();
-  const { title, description, id } = data[0];
+  let navigate = useNavigate();
+  const handleClickTips = ()=>{
+    navigate(MAIN_PAGES_ROUTES.TIPS_PAGE)
+  }
   return (
     <StyledHomePage>
-      <p>{title}</p>
-      <p>{description}</p>
-      <p>{id}</p>
       <MainButtonsContainer>
-        <Button buttonIconName="eyes">Find your best calm tips</Button>
+        <Button buttonIconName="eyes" onClick={handleClickTips}>Find your best calm tips</Button>
         <Button buttonIconName="eyes">Relax with some music</Button>
         <Button buttonIconName="eyes">Find your path to peace</Button>
       </MainButtonsContainer>
