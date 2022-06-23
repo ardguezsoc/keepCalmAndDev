@@ -1,21 +1,26 @@
-import{ Suspense, lazy } from 'react';
+import image1 from 'assets/images/motivational-img-1.png'
+import image2 from 'assets/images/motivational-img-2.png'
+import image3 from 'assets/images/motivational-img-3.png'
+import image4 from 'assets/images/motivational-img-4.png'
 
-// Load the 16 icons async inside an array
-const icons = Array.from({ length: 16 }, (_, idx) => idx + 1).map((id) =>
-  lazy(() => import(`components/CardImage/CardImage${id}`)),
-);
 
-// min and max included
-function random(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+const imagesObj = {
+  1: image1,
+  2: image2,
+  3: image3,
+  4: image4,
+}
+
+
+const getRandomImage = () => {
+  const random = Math.floor(Math.random() * 3) + 1
+  return imagesObj[random]
 }
 
 /** random svg illustrations used in cards  */
-export const ResultCardImage = ({ ...rest }) => {
-  const Icon = icons[random(0, 15)];
+export const ResultCardImage = () => {
+  const image = getRandomImage()
   return (
-    <Suspense fallback={<div style={{ paddingTop: '75%' }} />}>
-      <Icon {...rest} />
-    </Suspense>
+    <img src={image} alt='image'/>
   );
 };
