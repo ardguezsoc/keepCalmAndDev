@@ -2,12 +2,12 @@ import backgroundVideo from 'assets/videos/blue-ocean.mp4';
 import { Button } from 'components/Button/Button';
 import {
   BackgroundVideo,
-  MainButtonsContainer,
+  MainButtonsContainer, MainImageContainer,
   StyledHomePage
-} from 'pages/HomePage/HomePage.styled';
+} from 'pages/HomePage/HomePage.styled'
 import { MAIN_PAGES_ROUTES } from 'constants/routes'
 import { useNavigate } from "react-router-dom";
-
+import { ResultCardImage } from 'components/ResultCardImage/ResultCardImage'
 const HomePage = () => {
   let navigate = useNavigate();
   const handleClickTips = ()=>{
@@ -20,6 +20,9 @@ const HomePage = () => {
         <Button buttonIconName="eyes">Relax with some music</Button>
         <Button buttonIconName="eyes">Find your path to peace</Button>
       </MainButtonsContainer>
+      <MainImageContainer>
+        <ResultCardImage/>
+      </MainImageContainer>
 
       <BackgroundVideo
         height={1080}

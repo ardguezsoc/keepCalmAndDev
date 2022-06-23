@@ -8,7 +8,7 @@ export const keepCalmDevtTheme = {
   // colors -----------
   palette: {
     common: {
-      background: '#303030',
+      background: '#9B9DA0',
       black: '#000000',
       white: '#ffffff',
       separator: '#D8D8D8',

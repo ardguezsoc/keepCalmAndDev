@@ -1,6 +1,9 @@
 import styled from 'styled-components/macro';
+import {  flexCenter } from 'styles/mixins'
+import { calcRem } from 'utils/functions/styles'
 
 export const StyledHomePage = styled.div`
+  ${flexCenter('row', 1)}
   border: none;
   padding: 1rem 2rem;
   height: 100vh;
@@ -52,6 +55,19 @@ export const MainButtonsContainer = styled.div`
   grid-template-columns: 1fr;
   gap: 1rem
 `
+export const MainImageContainer = styled.div`
+  width: 400px;
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  img {
+    border-radius: 4%;
+    opacity: 50%;
+    height: ${calcRem(350)};
+  }
+`
+
 export const StyledTitle = styled.div`
   margin: 2rem 0;
   font-size: ${({theme}) => theme.font.size.normal};
