@@ -1,3 +1,6 @@
+import { calcRem } from 'utils/functions/styles'
+
+const spacingBaseUnit = 8
 export const keepCalmDevtTheme = {
   name: 'hoges',
   base: '16px',
@@ -30,6 +33,11 @@ export const keepCalmDevtTheme = {
       warning: '#D66607',
       successText: '#005E00',
       successGood: '#02AE00',
+      disabled: {
+        light: '#F1F3F5',
+        base: '#ADB5BD',
+        dark: '#DEE2E6'
+      },
     },
     // pink
     primary: {
@@ -59,30 +67,65 @@ export const keepCalmDevtTheme = {
   // Typography -----------
 
   font: {
-    family: {
-      text: 'Inter, sans-serif',
-    },
+    family: { main: 'Helvetica Neue, Helvetica, Arial,sans-serif' },
     weight: {
-      thin: 100,
       light: 300,
-      normal: 400,
-      medium: 500,
-      semibold: 600,
-      bold: 700,
-      bolder: 900,
+      regular: 400,
+      semibold: 500,
+      bold: 700
     },
     size: {
-      extraTiny: '0.75rem', // 12px
-      tiny: '0.875rem', // 14px
-      small: '1rem', //    16px
-      topic: '1.125rem', // 18px
-      normal: '1.5rem', // 24px
-      double: '2rem', //   32px
-      medium: '2.5rem', // 40px
-      large: '3.75rem', // 60px
-      extra: '5rem', //    80px
+      desktop: {
+        display: '36px',
+        h1: '32px',
+        h2: '28px',
+        h3: '26px',
+        h4: '22px',
+        h5: '20px',
+        h6: '18px',
+        body: '16px',
+        bodyS: '14px',
+        bodyXS: '12px',
+        bodyL: '18px'
+      }
     },
+    actions: {
+      action: '16px',
+      actionS: '14px',
+      actionXS: '13px',
+      actionL: '18px'
+    },
+    lineHeight: {
+      _48: '48px',
+      _44: '44px',
+      _40: '40px',
+      _39: '39px',
+      _34: '34px',
+      _32: '32px',
+      _31: '31px',
+      _27: '27px',
+      _24: '24px',
+      _22: '22px',
+      _21: '21px',
+      _19: '19px',
+      _18: '18px',
+      _17: '17px',
+      _15: '15px'
+    }
   },
+
+  // Shadows -----------
+
+  shadows: {
+    none: 'none',
+    xs: '0px 1px 2px rgba(0, 0, 0, 0.1)',
+    s: '0px 2px 4px rgba(0, 0, 0, 0.1)',
+    m: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+    l: '0px 6px 8px rgba(0, 0, 0, 0.1)',
+    xl: '0px 8px 10px rgba(0, 0, 0, 0.1)',
+    xxl: '0px 4px 33px rgba(0, 0, 0, 0.11)'
+  },
+
 
   // Responsive -----------
   breakpoints: {
@@ -91,6 +134,48 @@ export const keepCalmDevtTheme = {
     laptop: '1024px',
     laptopL: '1440px',
   },
+
+  // Radius -----------
+
+  radius: {
+    none: '0px',
+    xs: '4px',
+    s: '10px',
+    m: '19px',
+    xl: '100%'
+  },
+
+  // button height
+  buttonHeight: {
+    xxSmall: '14px',
+    xSmall: '16px',
+    small: '32px',
+    medium: '40px',
+    large: '56px',
+    xLarge: '60px',
+    xxLarge: '68px'
+  },
+  // icon size
+  icon: {
+    xxSmall: calcRem(14),
+    xSmall: calcRem(16),
+    small: calcRem(20),
+    medium: calcRem(24),
+    large: calcRem(32),
+    xLarge: calcRem(36),
+    xxLarge: calcRem(60)
+  },
+
+
+  // spacing
+
+  spacing: (...args) => {
+    const length = args.length
+    if (length < 1 || length > 4) return '0px'
+
+    return args.map(space => `${space * spacingBaseUnit}px`).join(' ')
+  },
+
 
   // Border radius -----------
   borderRadius: {
@@ -136,4 +221,4 @@ export const keepCalmDevtTheme = {
     numberOfColumns: 12,
     columnWidth: '1fr',
   },
-};
+}

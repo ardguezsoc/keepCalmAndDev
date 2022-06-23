@@ -1,4 +1,4 @@
-import gsLogo from 'assets/icons/dcsl-logo.png';
+import gsLogo from 'assets/images/dcsl-logo.png';
 import { LogoContainer, LogoImage, LogoName } from 'components/Logo/Logo.styled';
 
 export const Logo = ({ large = false }) => {
