@@ -9,7 +9,7 @@ export const GlobalStylesCss = css`
   }
 
   html {
-    font-family: ${({ theme }) => theme.font.family.text};
+    font-family: ${({ theme }) => theme.font.family.main};
     font-size: ${({ theme }) => theme.base};
     font-weight: ${({ theme }) => theme.font.weight.medium};
     line-height: 1.5;

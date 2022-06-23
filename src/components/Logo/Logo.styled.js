@@ -1,8 +1,10 @@
 import styled from 'styled-components/macro';
 
 export const LogoContainer = styled.div`
+  margin-top: 2rem;
+  margin-left: 120px;
   --logo-image-width: ${({ large }) => (large ? '60px' : '30px')};
-  --logo-name-font-size: ${({ large }) => (large ? '1.5rem' : '1.2rem')};
+  --logo-name-font-size: ${({ large }) => (large ? '2.5rem' : '1.2rem')};
   display: flex;
   align-items: center;
 `;

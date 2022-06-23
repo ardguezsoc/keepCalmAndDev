@@ -6,7 +6,7 @@ export const Logo = ({ large = false }) => {
     <LogoContainer large={large} >
       <LogoImage src={gsLogo} alt="GuideSmiths logo" />
       <LogoName>
-        Keep<span>DevCalm</span>
+        Keep     <span>DevCalm</span>
       </LogoName>
     </LogoContainer>
   );

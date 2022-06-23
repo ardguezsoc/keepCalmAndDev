@@ -23,6 +23,7 @@ export const StyledButtonInnerWrapper = styled.div`
 export const StyledButton = styled.button`
   ${flexCenter()};
   ${rowItemGap(1.25)};
+  color: ${({theme}) => theme.palette.common.white};
   border:none;
   cursor: pointer;
   box-shadow: none;
@@ -55,7 +56,7 @@ export const StyledButton = styled.button`
 }
 
   ${({ theme, variant, color }) => variant === 'contained' && css`
-  background-color: ${color ? getColor(theme, color) : theme.palette.primary.base};
+  background-color: ${color ? getColor(theme, color) : theme.palette.primary.main};
   &:disabled {
     color:${({ theme }) => theme.palette.common.disabled.base};
     background:${({ theme }) => theme.palette.common.disabled.light};

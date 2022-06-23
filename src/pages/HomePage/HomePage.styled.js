@@ -1,11 +1,10 @@
 import styled from 'styled-components/macro';
 import {  flexCenter } from 'styles/mixins'
-import { calcRem } from 'utils/functions/styles'
 
 export const StyledHomePage = styled.div`
   ${flexCenter('row', 1)}
   border: none;
-  padding: 1rem 2rem;
+  padding: 1rem 0rem;
   height: 100vh;
   position: relative;
   background-size: 100% 100%;
@@ -19,6 +18,18 @@ export const StyledHomePage = styled.div`
     font-size: 1.9rem;
     text-align: center;
   }
+  `
+
+export const StyledHomeLeftSide = styled.div`
+  width: 50%;
+  `
+export const StyledHomeRightSide = styled.div`
+  width: 50vw;
+  background-color: ${({theme}) => theme.palette.common.white};
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   `
 
 export const BackgroundVideo = styled.video`
@@ -49,24 +60,13 @@ export const Overlay = styled.div`
 `
 
 export const MainButtonsContainer = styled.div`
-  width: 400px;
+  width: 380px;
   display: grid;
   flex-direction: row;
   grid-template-columns: 1fr;
-  gap: 1rem
+  gap: 3rem;
 `
-export const MainImageContainer = styled.div`
-  width: 400px;
-  display: grid;
-  flex-direction: row;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  img {
-    border-radius: 4%;
-    opacity: 50%;
-    height: ${calcRem(350)};
-  }
-`
+
 
 export const StyledTitle = styled.div`
   margin: 2rem 0;

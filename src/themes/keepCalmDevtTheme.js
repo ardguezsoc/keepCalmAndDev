@@ -41,7 +41,7 @@ export const keepCalmDevtTheme = {
     },
     // pink
     primary: {
-      main: '#68b8d1',
+      main: '#82a6a5',
       dark: '#4199aa',
       darker: '#0d486a',
       lighter: 'rgb(245 180 0, 0.1)',
@@ -67,7 +67,7 @@ export const keepCalmDevtTheme = {
   // Typography -----------
 
   font: {
-    family: { main: 'Helvetica Neue, Helvetica, Arial,sans-serif' },
+    family: { main: 'Montserrat, Helvetica, Arial,sans-serif' },
     weight: {
       light: 300,
       regular: 400,

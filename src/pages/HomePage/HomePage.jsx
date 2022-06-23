@@ -7,7 +7,8 @@ import {
   MainButtonsContainer,
   MainImageContainer,
   StyledHomePage,
-} from 'pages/HomePage/HomePage.styled';
+  StyledHomeLeftSide, StyledHomeRightSide
+} from 'pages/HomePage/HomePage.styled'
 import { MAIN_PAGES_ROUTES } from 'constants/routes';
 import { useNavigate } from 'react-router-dom';
 import { ResultCardImage } from 'components/ResultCardImage/ResultCardImage';
@@ -20,32 +21,33 @@ const HomePage = () => {
 
   return (
     <StyledHomePage>
+      <StyledHomeLeftSide>
+        <BackgroundVideo
+          height={1080}
+          width={1920}
+          loop={true}
+          autoPlay="autoplay"
+          muted
+        >
+          <source src={backgroundVideo} type="video/mp4" />
+        </BackgroundVideo>
+      </StyledHomeLeftSide>
+      <StyledHomeRightSide>
       <MainButtonsContainer>
-        <Button buttonIconName="eyes" onClick={handleClickTips}>
+        <Button  onClick={handleClickTips} size={'xLarge'}>
           Find your best calm tips
         </Button>
         <Button
-          buttonIconName="eyes"
+
           onClick={() => setVisibilityPlayerStatus(!visibilityPlayerStatus)}
+          size={'xLarge'}
         >
           Relax with some music
         </Button>
-        <Button buttonIconName="eyes">Play some music</Button>
+        <Button  size={'xLarge'}>Play some music</Button>
       </MainButtonsContainer>
-      <MainImageContainer>
-        <ResultCardImage />
-      </MainImageContainer>
-
-      <BackgroundVideo
-        height={1080}
-        width={1920}
-        loop={true}
-        autoPlay="autoplay"
-        muted
-      >
-        <source src={backgroundVideo} type="video/mp4" />
-      </BackgroundVideo>
       <SpotifyPlayer hidden={visibilityPlayerStatus} />
+      </StyledHomeRightSide>
     </StyledHomePage>
   );
 };
