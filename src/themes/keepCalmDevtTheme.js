@@ -33,9 +33,9 @@ export const keepCalmDevtTheme = {
     },
     // pink
     primary: {
-      main: '#4d9383',
-      dark: '#b7176d',
-      light: '#ffffff',
+      main: '#68b8d1',
+      dark: '#4199aa',
+      darker: '#0d486a',
       lighter: 'rgb(245 180 0, 0.1)',
       contrastText: '#1F2022',
     },

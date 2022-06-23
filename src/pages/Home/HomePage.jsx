@@ -1,15 +1,16 @@
-import { useTips } from '../../hooks';
+import { StyledHomePage } from 'pages/Home/HomePage.styled'
+import { useTips } from 'hooks'
 
 const HomePage = () => {
   const { getTipsPage } = useTips();
   const data = getTipsPage();
   const { title, description, id } = data[0];
   return (
-    <div>
+    <StyledHomePage>
       <p>{title}</p>
       <p>{description}</p>
       <p>{id}</p>
-    </div>
+    </StyledHomePage>
   );
 };
 
