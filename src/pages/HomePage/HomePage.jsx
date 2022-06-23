@@ -1,4 +1,4 @@
-import { StyledHomePage } from 'pages/Home/HomePage.styled'
+import { MainButtonsContainer, StyledHomePage } from 'pages/HomePage/HomePage.styled'
 import { useTips } from 'hooks'
 import { Button } from 'components/Button/Button'
 
@@ -11,7 +11,7 @@ const HomePage = () => {
       <p>{title}</p>
       <p>{description}</p>
       <p>{id}</p>
-      <div>
+      <MainButtonsContainer>
         <Button buttonIconName='eyes'>
           Find your best calm tips
         </Button>
@@ -21,7 +21,7 @@ const HomePage = () => {
         <Button buttonIconName='eyes'>
           Find your path to peace
         </Button>
-      </div>
+      </MainButtonsContainer>
     </StyledHomePage>
   );
 };

@@ -6,8 +6,8 @@ import {
   HeaderBrand,
 } from 'components/Header/Header.styled';
 import {  useState } from 'react';
-import { Logo } from 'components/Logo';
 import { MAIN_PAGES_ROUTES } from 'constants/routes';
+import { Logo } from 'components/Logo'
 
 export const Header = () => {
   const [toggled, setToggled] = useState(false);

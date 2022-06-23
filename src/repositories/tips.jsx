@@ -7,7 +7,25 @@ export const createTipRepository = () => {
       {
         id: '1',
         title: 'Tile Tip',
-        description: 'This is a description',
+        description: 'This is a tip description',
+        author: {
+          firstname: 'John',
+          lastName: 'Doe',
+        },
+        image: '',
+      },
+      {
+        id: '1',
+        title: 'Tile Tip',
+        description: 'This is a tip description',
+        author: 'John Doe',
+        image: '',
+      },
+      {
+        id: '1',
+        title: 'Tile Tip',
+        description: 'This is a tip description',
+        author: 'John Doe',
         image: '',
       },
     ];

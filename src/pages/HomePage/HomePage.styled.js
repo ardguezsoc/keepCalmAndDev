@@ -14,6 +14,14 @@ export const StyledHomePage = styled.div`
     text-align: center;
   }
 `;
+
+export const MainButtonsContainer = styled.div`
+  width: 400px;
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 1fr;
+  gap:1rem
+`
 export const StyledTitle = styled.div`
   margin: 2rem 0;
   font-size: ${({ theme }) => theme.font.size.normal};
