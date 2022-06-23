@@ -19,7 +19,7 @@ export const Header = () => {
       <HeaderBrand>
         <HeaderLogo>
           <HeaderLink to={MAIN_PAGES_ROUTES.HOME_PAGE}>
-            <Logo large={false} />
+            <Logo large />
           </HeaderLink>
         </HeaderLogo>
       </HeaderBrand>

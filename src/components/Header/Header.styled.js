@@ -64,12 +64,12 @@ export const HeaderLink = styled(NavLink)`
 export const HeaderNav = styled.div`
   display: flex;
   position: absolute;
+  width: min-content;
   gap: 1rem;
   top: 4rem;
   left: 0;
   z-index: 1000;
   flex-direction: column;
-  width: 100%;
   padding-bottom: 1rem;
   padding-top: 1rem;
   align-items: center;
