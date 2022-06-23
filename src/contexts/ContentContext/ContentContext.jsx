@@ -1,6 +1,6 @@
 import { createContext } from 'react';
-import { createTipService } from '../../services';
-import { createTipRepository } from '../../repositories';
+import { createTipService } from 'services';
+import { createTipRepository } from 'repositories';
 
 export const ContentContext = createContext();
 
