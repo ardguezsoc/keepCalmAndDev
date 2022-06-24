@@ -1,10 +1,10 @@
 import styled from 'styled-components/macro';
-import {  flexCenter } from 'styles/mixins'
+import {flexCenter} from 'styles/mixins'
 
 export const StyledHomePage = styled.div`
   ${flexCenter('row', 1)}
   border: none;
-  padding: 1rem 0rem;
+  padding: 1rem 0;
   height: 100vh;
   position: relative;
   background-size: 100% 100%;
@@ -18,11 +18,11 @@ export const StyledHomePage = styled.div`
     font-size: 1.9rem;
     text-align: center;
   }
-  `
+`
 
 export const StyledHomeLeftSide = styled.div`
   width: 50%;
-  `
+`
 export const StyledHomeRightSide = styled.div`
   width: 50vw;
   background-color: ${({theme}) => theme.palette.common.white};
@@ -30,16 +30,17 @@ export const StyledHomeRightSide = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  `
+`
 export const StyledAnchor = styled.a`
   text-decoration: none;
   width: 100%;
+
   button {
     width: 100%;
   }
 `
 
-export const BackgroundVideo = styled.video`
+export const StyledBackgroundVideo = styled.video`
   height: 56.25vw; // for a 16:9 aspect ratio, 9/16*100 = 56.25
   left: 50%;
   min-height: 100vh;
@@ -51,20 +52,6 @@ export const BackgroundVideo = styled.video`
   z-index: -1;
 `
 
-export const Overlay = styled.div`
-  background-color: rgba(0, 0, 0, 0.66);
-  bottom: 0;
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
-  left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  object-fit: cover;
-  object-position: center;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: -1;
-`
 
 export const MainButtonsContainer = styled.div`
   width: 380px;

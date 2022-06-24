@@ -5,13 +5,12 @@ import { SpotifyPlayer } from 'components/SpotifyPlayer/SpotifyPlayer';
 import { StyledSvgIconReact } from 'components/SvgIconReact/SvgIconReact.styled';
 import Draggable from 'react-draggable';
 import {
-  BackgroundVideo,
   MainButtonsContainer,
   StyledHomePage,
   StyledHomeLeftSide,
   StyledHomeRightSide,
-  StyledAnchor,
-} from 'pages/HomePage/HomePage.styled';
+  StyledAnchor, StyledBackgroundVideo
+} from 'pages/HomePage/HomePage.styled'
 import { MAIN_PAGES_ROUTES } from 'constants/routes';
 import { useNavigate } from 'react-router-dom';
 import Modal from 'react-modal';
@@ -54,7 +53,7 @@ const HomePage = () => {
   return (
     <StyledHomePage>
       <StyledHomeLeftSide>
-        <BackgroundVideo
+        <StyledBackgroundVideo
           height={1080}
           width={1920}
           loop={true}
@@ -62,7 +61,7 @@ const HomePage = () => {
           muted
         >
           <source src={backgroundVideo} type="video/mp4" />
-        </BackgroundVideo>
+        </StyledBackgroundVideo>
       </StyledHomeLeftSide>
       <StyledHomeRightSide>
         <MainButtonsContainer>
