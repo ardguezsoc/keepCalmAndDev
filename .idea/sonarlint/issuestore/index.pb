@@ -47,12 +47,8 @@ b
 2src/components/ResultCardImage/ResultCardImage.jsx,0/8/08f19bf90b7377eb8cfda655395ef3df096872ed
 K
 src/styles/Global.styled.js,f/1/f13bc6a197b6d34046559c5fef817d1295069e57
-P
- src/components/Button/Button.jsx,d/5/d53b799cb0e476e9bb93560ee5de6f1449dd0677
 M
 src/utils/functions/styles.js,3/a/3aae90522f93a3e04738548ac90ca309ef28720c
-V
-&src/components/Button/Button.styled.js,4/0/403ef2de9926a84e1a7360a3af0576d154a51066
 J
 src/styles/Fonts.styled.js,d/d/dd179c4211dae183a52494e457eb8e8642864d25
 X

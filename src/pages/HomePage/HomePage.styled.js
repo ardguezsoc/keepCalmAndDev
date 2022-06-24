@@ -31,6 +31,13 @@ export const StyledHomeRightSide = styled.div`
   justify-content: center;
   align-items: center;
   `
+export const StyledAnchor = styled.a`
+  text-decoration: none;
+  width: 100%;
+  button {
+    width: 100%;
+  }
+`
 
 export const BackgroundVideo = styled.video`
   height: 56.25vw; // for a 16:9 aspect ratio, 9/16*100 = 56.25

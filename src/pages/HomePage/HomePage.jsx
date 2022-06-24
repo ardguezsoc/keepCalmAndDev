@@ -6,10 +6,12 @@ import {
   BackgroundVideo,
   MainButtonsContainer,
   StyledHomePage,
-  StyledHomeLeftSide, StyledHomeRightSide
+  StyledHomeLeftSide,
+  StyledHomeRightSide,
+  StyledAnchor
 } from 'pages/HomePage/HomePage.styled'
 import { MAIN_PAGES_ROUTES } from 'constants/routes';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'
 const HomePage = () => {
   let navigate = useNavigate();
   const [visibilityPlayerStatus, setVisibilityPlayerStatus] = useState(true);
@@ -42,7 +44,9 @@ const HomePage = () => {
         >
           Relax with some music
         </Button>
-        <Button  size={'xLarge'}>Play some music</Button>
+        <StyledAnchor href="https://davidubuntu.github.io/duality/">
+          <Button  size={'xLarge'} >Enjoy duality game</Button>
+        </StyledAnchor>
       </MainButtonsContainer>
       <SpotifyPlayer hidden={visibilityPlayerStatus} />
       </StyledHomeRightSide>
