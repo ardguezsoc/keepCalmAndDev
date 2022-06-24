@@ -9,8 +9,9 @@ import {
   StyledHomePage,
   StyledHomeLeftSide,
   StyledHomeRightSide,
-  StyledAnchor, StyledBackgroundVideo
-} from 'pages/HomePage/HomePage.styled'
+  StyledAnchor,
+  StyledBackgroundVideo,
+} from 'pages/HomePage/HomePage.styled';
 import { MAIN_PAGES_ROUTES } from 'constants/routes';
 import { useNavigate } from 'react-router-dom';
 import Modal from 'react-modal';
@@ -23,10 +24,10 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    height:'500px',
-    width:'500px',
+    height: '500px',
+    width: '500px',
     transform: 'translate(-50%, -50%)',
-    borderRadius: '10px'
+    borderRadius: '10px',
   },
 };
 
@@ -71,7 +72,10 @@ const HomePage = () => {
           <Button onClick={openModal} size={'xLarge'}>
             Daily motivation
           </Button>
-          <StyledAnchor href="https://davidubuntu.github.io/duality/">
+          <StyledAnchor
+            href="https://davidubuntu.github.io/duality/"
+            target="_blank"
+          >
             <Button size={'xLarge'}>Play duality game</Button>
           </StyledAnchor>
         </MainButtonsContainer>
@@ -80,7 +84,7 @@ const HomePage = () => {
           <StyledSvgIconReact
             size={'xLarge'}
             iconName="music"
-            filter='invert(67%) sepia(9%) saturate(676%) hue-rotate(129deg) brightness(92%) contrast(93%)'
+            filter="invert(67%) sepia(9%) saturate(676%) hue-rotate(129deg) brightness(92%) contrast(93%)"
             onClick={() => setVisibilityPlayerStatus(!visibilityPlayerStatus)}
           />
         </Draggable>

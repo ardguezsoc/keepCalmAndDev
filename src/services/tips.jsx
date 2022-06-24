@@ -4,7 +4,12 @@ export const createTipService = (tipRepository) => {
     return data;
   };
 
+  const postTip = async (id) => {
+    await tipRepository.postTip(id);
+  };
+
   return {
     getTips,
+    postTip,
   };
 };
