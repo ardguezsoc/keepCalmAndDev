@@ -2,18 +2,20 @@ import React, { useState } from 'react';
 import backgroundVideo from 'assets/videos/blue-ocean.mp4';
 import { Button } from 'components/Button/Button';
 import { SpotifyPlayer } from 'components/SpotifyPlayer/SpotifyPlayer';
+import { StyledSvgIconReact } from 'components/SvgIconReact/SvgIconReact.styled';
+import Draggable from 'react-draggable';
 import {
   BackgroundVideo,
   MainButtonsContainer,
   StyledHomePage,
   StyledHomeLeftSide,
   StyledHomeRightSide,
-  StyledAnchor
-} from 'pages/HomePage/HomePage.styled'
+  StyledAnchor,
+} from 'pages/HomePage/HomePage.styled';
 import { MAIN_PAGES_ROUTES } from 'constants/routes';
-import {  useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import Modal from 'react-modal';
-import { ResultCardImage } from 'components/ResultCardImage/ResultCardImage'
+import { ResultCardImage } from 'components/ResultCardImage/ResultCardImage';
 
 const customStyles = {
   content: {
@@ -22,8 +24,8 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    height:'400px',
-    width:'400px',
+    height: '400px',
+    width: '400px',
     transform: 'translate(-50%, -50%)',
   },
 };
@@ -36,17 +38,17 @@ const HomePage = () => {
     navigate(MAIN_PAGES_ROUTES.TIPS_PAGE);
   };
 
-  const openModal = ()=> {
+  const openModal = () => {
     setIsOpen(true);
-  }
+  };
 
-  const afterOpenModal=() =>{
+  const afterOpenModal = () => {
     // references are now sync'd and can be accessed.
-  }
+  };
 
-  const closeModal=()=> {
+  const closeModal = () => {
     setIsOpen(false);
-  }
+  };
 
   return (
     <StyledHomePage>
@@ -62,28 +64,24 @@ const HomePage = () => {
         </BackgroundVideo>
       </StyledHomeLeftSide>
       <StyledHomeRightSide>
-      <MainButtonsContainer>
-        <Button  onClick={handleClickTips} size={'xLarge'}>
-          Find your best calm tips
-        </Button>
-        <Button
-
-          onClick={() => setVisibilityPlayerStatus(!visibilityPlayerStatus)}
-          size={'xLarge'}
-        >
-          Relax with some music
-        </Button>
-        <Button
-          onClick={openModal}
-          size={'xLarge'}
-        >
-         Daily motivational sentece
-        </Button>
-        <StyledAnchor href="https://davidubuntu.github.io/duality/">
-          <Button  size={'xLarge'} >Enjoy duality game</Button>
-        </StyledAnchor>
-      </MainButtonsContainer>
-      <SpotifyPlayer hidden={visibilityPlayerStatus} />
+        <MainButtonsContainer>
+          <Button onClick={handleClickTips} size={'xLarge'}>
+            Find your best calm tips
+          </Button>
+          <Button onClick={openModal} size={'xLarge'}>
+            Daily motivational sentece
+          </Button>
+          <StyledAnchor href="https://davidubuntu.github.io/duality/">
+            <Button size={'xLarge'}>Enjoy duality game</Button>
+          </StyledAnchor>
+        </MainButtonsContainer>
+        <SpotifyPlayer hidden={visibilityPlayerStatus} />
+        <Draggable>
+          <StyledSvgIconReact
+            iconName="music"
+            onClick={() => setVisibilityPlayerStatus(!visibilityPlayerStatus)}
+          />
+        </Draggable>
       </StyledHomeRightSide>
       <Modal
         isOpen={modalIsOpen}
@@ -92,7 +90,7 @@ const HomePage = () => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <ResultCardImage/>
+        <ResultCardImage />
       </Modal>
     </StyledHomePage>
   );
