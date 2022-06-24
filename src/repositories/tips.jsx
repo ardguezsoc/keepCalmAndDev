@@ -1,33 +1,34 @@
-// import axios from 'axios';
+import axios from 'axios';
 
 export const createTipRepository = () => {
   const getTipsPage = () => {
-    // await axios.get(`url_a_donde_sea/api/v1/Tips`);
+    const response =  axios.get(`https://860b-80-26-195-161.eu.ngrok.io/Quote`);
+    console.log(response)
     return [
       {
         id: '1',
-        title: 'Tile Tip',
-        description: 'This is a tip description',
-        author: {
-          firstname: 'John',
-          lastName: 'Doe',
-        },
-        image: '',
+        quote: 'The things we do without looking forward to them are the best because we don\'t have any expectations. Then the magic happens',
+        author: 'Natalie Howlie',
+        quoteDate:'2022-06-24T10:34:28.8717249Z'
       },
       {
-        id: '1',
-        title: 'Tile Tip',
-        description: 'This is a tip description',
-        author: 'John Doe',
-        image: '',
+        id: '2',
+        quote: 'Nothing ever goes away until it has taught us what we need to know',
+        author: 'Pema Chodron',
+        quoteDate:'2022-06-24T10:34:28.8717249Z'
       },
       {
-        id: '1',
-        title: 'Tile Tip',
-        description: 'This is a tip description',
-        author: 'John Doe',
-        image: '',
+        id: '3',
+        quote: 'The feeling that any task is a nuisance will soon disappear if it is done in mindfulness',
+        author: 'Thích Nhất Hạnh',
+        quoteDate:'2022-06-24T10:34:28.8717249Z'
       },
+      {
+        id: '4',
+        quote: 'Mindfulness is a way of befriending ourselves and our experience.',
+        author: 'Jon Kabat-Zinn',
+        quoteDate:'2022-06-24T10:34:28.8717249Z'
+      }
     ];
   };
 

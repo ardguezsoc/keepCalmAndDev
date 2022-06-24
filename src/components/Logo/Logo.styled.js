@@ -15,13 +15,13 @@ export const LogoImage = styled.img`
   background: transparent;
   filter: brightness(0) invert(1);
 `;
+export const StyledSpanLogoName = styled.span`
+  color: ${({ theme,isHomePage }) =>isHomePage ? theme.palette.primary.main: theme.palette.common.sand};
+`;
 
 export const LogoName = styled.h2`
   color: ${({ theme }) => theme.palette.common.white};
   font-size: var(--logo-name-font-size);
   font-weight: ${({ theme }) => theme.font.weight.medium};
-
-  span {
-    color: ${({ theme }) => theme.palette.primary.main};
-  }
+  
 `;
