@@ -66,13 +66,13 @@ const HomePage = () => {
       <StyledHomeRightSide>
         <MainButtonsContainer>
           <Button onClick={handleClickTips} size={'xLarge'}>
-            Find your best calm tips
+            Quote of the day
           </Button>
           <Button onClick={openModal} size={'xLarge'}>
-            Daily motivational sentece
+            Daily motivation
           </Button>
           <StyledAnchor href="https://davidubuntu.github.io/duality/">
-            <Button size={'xLarge'}>Enjoy duality game</Button>
+            <Button size={'xLarge'}>Play duality game</Button>
           </StyledAnchor>
         </MainButtonsContainer>
         <SpotifyPlayer hidden={visibilityPlayerStatus} />
