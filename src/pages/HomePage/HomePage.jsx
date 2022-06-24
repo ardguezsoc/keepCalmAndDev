@@ -22,9 +22,10 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    height:'400px',
-    width:'400px',
+    height:'500px',
+    width:'500px',
     transform: 'translate(-50%, -50%)',
+    borderRadius: '10px'
   },
 };
 
