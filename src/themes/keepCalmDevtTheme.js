@@ -12,7 +12,7 @@ export const keepCalmDevtTheme = {
       black: '#000000',
       white: '#ffffff',
       separator: '#D8D8D8',
-      improve: '#EEB336',
+      sand: '#bc9370',
       yellow: '#FFD54F',
       price: '#333333',
       foreground: '#242424',

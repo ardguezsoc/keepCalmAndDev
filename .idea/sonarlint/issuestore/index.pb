@@ -21,8 +21,6 @@ V
 &src/components/CardImage/CardImage4.js,3/f/3fca78dc59b27fecbc441a8672022a9b04e0755f
 V
 &src/components/CardImage/CardImage1.js,b/b/bbea1c995926837bf2bf681def7d3ed64b33d070
-P
- src/components/Header/Header.jsx,c/1/c190362ff4dd89e9c16838b502ca303aeecc3db4
 V
 &src/components/Header/Header.styled.js,3/5/3518a134e00b3eb3e5d295cd3d126389c975c12a
 A
