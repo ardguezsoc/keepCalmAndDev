@@ -43,7 +43,5 @@ L
 src/pages/HomePage/index.jsx,b/3/b37847dcdbb7fd72273507bffd3ddec916e64688
 K
 src/styles/Global.styled.js,f/1/f13bc6a197b6d34046559c5fef817d1295069e57
-M
-src/utils/functions/styles.js,3/a/3aae90522f93a3e04738548ac90ca309ef28720c
 J
 src/styles/Fonts.styled.js,d/d/dd179c4211dae183a52494e457eb8e8642864d25

@@ -80,6 +80,7 @@ const HomePage = () => {
           <StyledSvgIconReact
             size={'xLarge'}
             iconName="music"
+            filter='invert(67%) sepia(9%) saturate(676%) hue-rotate(129deg) brightness(92%) contrast(93%)'
             onClick={() => setVisibilityPlayerStatus(!visibilityPlayerStatus)}
           />
         </Draggable>

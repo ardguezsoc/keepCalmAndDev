@@ -11,6 +11,8 @@ import backgroundVideo from 'assets/videos/desert.mp4';
 import {useEffect, useState} from 'react';
 import {Carousel} from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Draggable from 'react-draggable'
+import { StyledSvgIconReact } from 'components/SvgIconReact/SvgIconReact.styled'
 
 
 const TipsPage = () => {
@@ -48,6 +50,14 @@ const TipsPage = () => {
                     }
                 </Carousel>
             </StyledCarousel>
+          <Draggable>
+            <StyledSvgIconReact
+              size={'xLarge'}
+              iconName="send"
+              filter='invert(100%) sepia(0%) saturate(0%) hue-rotate(296deg) brightness(108%) contrast(101%)'
+              onClick={() => {}}
+            />
+          </Draggable>
         </StyledTipsPage>
     );
 };

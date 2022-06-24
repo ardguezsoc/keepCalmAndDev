@@ -22,7 +22,7 @@ export const getColor = (
 ) => {
   const palette = theme.palette
   if (!color) return undefined
-  else if (color === 'primary' || color === 'secondary') return palette.brand[color][colorShade]
+  else if (color === 'primary' || color === 'secondary') return palette[color][colorShade]
   else return  theme.palette.brand.primary.base
 }
 export const getButtonFontSizeBySize = (
