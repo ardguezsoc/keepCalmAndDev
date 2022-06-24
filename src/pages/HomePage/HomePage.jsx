@@ -5,13 +5,11 @@ import { SpotifyPlayer } from 'components/SpotifyPlayer/SpotifyPlayer';
 import {
   BackgroundVideo,
   MainButtonsContainer,
-  MainImageContainer,
   StyledHomePage,
   StyledHomeLeftSide, StyledHomeRightSide
 } from 'pages/HomePage/HomePage.styled'
 import { MAIN_PAGES_ROUTES } from 'constants/routes';
 import { useNavigate } from 'react-router-dom';
-import { ResultCardImage } from 'components/ResultCardImage/ResultCardImage';
 const HomePage = () => {
   let navigate = useNavigate();
   const [visibilityPlayerStatus, setVisibilityPlayerStatus] = useState(true);

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledResultCard = styled.div`
-  border: 1px solid ${({ theme }) => theme.palette.primary.main};
   background-color: ${({ theme }) => theme.palette.common.white};
   width: 225px;
   height: 300px;

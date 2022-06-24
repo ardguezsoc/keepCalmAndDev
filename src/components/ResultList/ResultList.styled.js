@@ -4,6 +4,8 @@ import { media } from 'styles/media.styled';
 export const ResultListContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  width: 100vw;
+  background-color: ${({ theme }) => theme.palette.common.white};
   ${media.tablet} {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -13,8 +15,5 @@ export const ResultListContainer = styled.div`
   grid-auto-rows: auto;
   grid-gap: 1rem;
   border: none;
-  margin-top: 1rem;
   padding: 1rem 0;
-  margin-left: -1rem;
-  margin-right: -1rem;
 `;
