@@ -1,13 +1,21 @@
-import {StyledTipsPage } from 'pages/TipsPage/TipsPage.styled'
-import { useTips } from 'hooks'
-import { BackgroundVideo } from 'pages/HomePage/HomePage.styled'
+import { StyledTipsPage } from 'pages/TipsPage/TipsPage.styled';
+import { useTips } from 'hooks';
+import { BackgroundVideo } from 'pages/HomePage/HomePage.styled';
 import backgroundVideo from 'assets/videos/desert.mp4';
+import { useEffect, useState } from 'react';
 
 const TipsPage = () => {
-  const { getTipsPage } = useTips();
-  const data = getTipsPage();
-  // eslint-disable-next-line no-unused-vars
-  const { title, description, id } = data[0];
+  const { getTips } = useTips();
+  const [data, setData] = useState([]);
+  const checkingData = async () => {
+    const data = await getTips();
+    setData(data);
+  };
+
+  useEffect(() => {
+    checkingData();
+  }, []);
+
   return (
     <StyledTipsPage>
       <BackgroundVideo

@@ -1,7 +1,10 @@
 export const createTipService = (tipRepository) => {
-  const getTipsPage = () => tipRepository.getTipsPage();
+  const getTips = async () => {
+    const data = await tipRepository.getTipsPage();
+    return data;
+  };
 
   return {
-    getTipsPage,
+    getTips,
   };
 };
