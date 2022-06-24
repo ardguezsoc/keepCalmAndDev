@@ -1,8 +1,7 @@
 import styled from 'styled-components/macro';
 
 export const Layout = styled.div`
-  min-height: 100vh;
-  overflow-x: hidden;
+  overflow-y: hidden;
   background-color: ${({ theme }) => theme.palette.common.transparent};
 `;
 
