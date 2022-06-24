@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import backgroundVideo from 'assets/videos/blue-ocean.mp4';
 import { Button } from 'components/Button/Button';
 import { SpotifyPlayer } from 'components/SpotifyPlayer/SpotifyPlayer';
@@ -11,13 +11,42 @@ import {
   StyledAnchor
 } from 'pages/HomePage/HomePage.styled'
 import { MAIN_PAGES_ROUTES } from 'constants/routes';
-import { Link, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
+import Modal from 'react-modal';
+import { ResultCardImage } from 'components/ResultCardImage/ResultCardImage'
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    height:'400px',
+    width:'400px',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+
 const HomePage = () => {
   let navigate = useNavigate();
+  const [modalIsOpen, setIsOpen] = React.useState(false);
   const [visibilityPlayerStatus, setVisibilityPlayerStatus] = useState(true);
   const handleClickTips = () => {
     navigate(MAIN_PAGES_ROUTES.TIPS_PAGE);
   };
+
+  const openModal = ()=> {
+    setIsOpen(true);
+  }
+
+  const afterOpenModal=() =>{
+    // references are now sync'd and can be accessed.
+  }
+
+  const closeModal=()=> {
+    setIsOpen(false);
+  }
 
   return (
     <StyledHomePage>
@@ -44,12 +73,27 @@ const HomePage = () => {
         >
           Relax with some music
         </Button>
+        <Button
+          onClick={openModal}
+          size={'xLarge'}
+        >
+         Daily motivational sentece
+        </Button>
         <StyledAnchor href="https://davidubuntu.github.io/duality/">
           <Button  size={'xLarge'} >Enjoy duality game</Button>
         </StyledAnchor>
       </MainButtonsContainer>
       <SpotifyPlayer hidden={visibilityPlayerStatus} />
       </StyledHomeRightSide>
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <ResultCardImage/>
+      </Modal>
     </StyledHomePage>
   );
 };

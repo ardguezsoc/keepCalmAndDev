@@ -18,6 +18,7 @@ import image17 from 'assets/images/motivational-img-17.png'
 import image18 from 'assets/images/motivational-img-18.png'
 import image19 from 'assets/images/motivational-img-19.png'
 import image20 from 'assets/images/motivational-img-20.png'
+import { StyledImage } from 'components/ResultCardImage/ResultCardImage.styled'
 
 export const ResultCardImage = () => {
   const imagesObj = {
@@ -50,6 +51,6 @@ export const ResultCardImage = () => {
 
   const image = getRandomImage()
   return (
-    <img src={image}/>
+    <StyledImage src={image}/>
   )
 };
