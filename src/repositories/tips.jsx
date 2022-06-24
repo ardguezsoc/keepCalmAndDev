@@ -1,8 +1,9 @@
-// import axios from 'axios';
+import axios from 'axios';
 
 export const createTipRepository = () => {
   const getTipsPage = () => {
-    // await axios.get(`https://860b-80-26-195-161.eu.ngrok.io/quotes`);
+    const response =  axios.get(`https://860b-80-26-195-161.eu.ngrok.io/Quote`);
+    console.log(response)
     return [
       {
         id: '1',
