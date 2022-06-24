@@ -11,7 +11,7 @@ const TipsPage = () => {
     const data = await getTips();
     setData(data);
   };
-
+  console.log(data);
   useEffect(() => {
     checkingData();
   }, []);

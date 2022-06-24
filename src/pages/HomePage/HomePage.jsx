@@ -79,6 +79,7 @@ const HomePage = () => {
         <SpotifyPlayer hidden={visibilityPlayerStatus} />
         <Draggable>
           <StyledSvgIconReact
+            size={'xLarge'}
             iconName="music"
             onClick={() => setVisibilityPlayerStatus(!visibilityPlayerStatus)}
           />
