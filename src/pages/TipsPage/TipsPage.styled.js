@@ -24,6 +24,9 @@ export const StyledCarousel = styled.div`
     width: 80%;
     display: block;
   }
+  .carousel.carousel-slider .control-arrow:hover {
+    background: none;
+  }
 `
 
 export const StyleSlideCarousel = styled.div`
